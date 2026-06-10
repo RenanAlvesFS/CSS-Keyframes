@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  height: 100vh;
+  animation: fundo 5s infinite alternate;
+}
+.ET {
+  animation: ET 5s;
+  left: -500px;
+  bottom: 1px;
+  animation: ET 5s ease-in forwards;
+  position: absolute;
+}
+@keyframes ET {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+
+  10% {
+    transform: translateX(200px) translateY(0);
+  }
+
+  20% {
+    transform: translateX(300px) translateY(0);
+  }
+  40% {
+    transform: translateX(0px) translateY(0);
+  }
+
+  60% {
+    transform: translateX(450px) translateY(0);
+  }
+
+  80% {
+    transform: translateX(600px) translateY(0);
+  }
+
+  100% {
+    transform: translateX(1100px) translateY(0);
+  }
+}
+.ET1 {
+  animation: ET1 5s;
+  right: 100%;
+  bottom: 1px;
+  animation: ET1 5s ease-in forwards;
+  position: absolute;
+}
+@keyframes ET1 {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+
+  10% {
+    transform: translateX(-50px) translateY(0);
+  }
+
+  20% {
+    transform: translateX(-100px) translateY(0);
+  }
+  40% {
+    transform: translateX(0px) translateY(0);
+  }
+
+  60% {
+    transform: translateX(-200px) translateY(0);
+  }
+
+  80% {
+    transform: translateX(-100px) translateY(0);
+  }
+
+  100% {
+    transform: translateX(1000px) translateY(0);
+  }
+}
+.ET2 {
+  animation: ET2 5s;
+  bottom: 0px;
+  animation: ET2 5s ease-in forwards;
+  position: absolute;
+}
+@keyframes ET2 {
+  0% {
+    transform: translateX(1600px) translateY(0);
+  }
+
+  100% {
+    transform: translateX(850px) translateY(0px);
+  }
+}
+.Logo img {
+  width: 500px;
+  height: 400px;
+}
+.Logo {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: 100px;
+  animation: Logo 5s infinite ease-in forwards;
+}
+@keyframes Logo {
+  0% {
+    transform: translate(-50%, -50%) scale(0.6);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.6);
+  }
+}
+@keyframes fundo {
+  0% {
+    background: #001f2f;
+  }
+  25% {
+    background: #003366;
+  }
+  50% {
+    background: #004080;
+  }
+  75% {
+    background: #1e3a8a;
+  }
+  100% {
+    background: #001f2f;
+  }
+}

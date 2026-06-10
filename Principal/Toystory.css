@@ -1,0 +1,249 @@
+body {
+  background-image: url("../img/Fundo-escuro.png");
+  display: Block;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding-top: 190px;
+}
+
+.container-principal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  position: absolute;
+  top: -100px;
+  width: 250px;
+  height: auto;
+  z-index: 10;
+}
+
+.Formato {
+  width: 1200px;
+  height: 600px;
+  overflow: hidden;
+  border-radius: 20px;
+  position: relative;
+}
+
+.Carrosel {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  animation: Carrosel 12s linear infinite;
+}
+
+.Carrosel img {
+  min-width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  object-position: center;
+  transition: 1s;
+  transition: transform 0.8s ease-in-out;
+}
+
+.Carrosel:hover {
+  animation-play-state: paused;
+}
+
+@keyframes Carrosel {
+  0%,
+  20% {
+    transform: translateX(0);
+  }
+  25%,
+  45% {
+    transform: translateX(-1200px);
+  }
+  50%,
+  70% {
+    transform: translateX(-2400px);
+  }
+  75%,
+  100% {
+    transform: translateX(-3600px);
+  }
+}
+
+.Carrosel img:hover {
+  transform: scale(1.1);
+}
+nav {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1200px;
+
+  background: linear-gradient(to right, #a10d0d, #df2f03);
+  padding: 15px 32px;
+  font-family: "Cinzel", serif;
+  border-radius: 25px;
+  border: 1px solid #b89b5e;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+.Topo {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.Topo a {
+  background-color: #0f558f;
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: "Arial", sans-serif;
+  padding: 8px 20px;
+  border-radius: 20px;
+}
+.Topo a:hover {
+  background-color: #ffae00;
+  color: #041a09;
+  border-color: #f2f2f2;
+}
+
+.secao-filmes {
+  width: 100%;
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: center;
+  scroll-margin-top: 180px;
+}
+
+.titulo-secao {
+  font-family: "Cinzel", serif;
+  color: #b89b5e;
+  font-size: 45px;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.container-cards {
+  display: block;
+  text-align: center;
+}
+.card-filme {
+  display: inline-block;
+  vertical-align: top;
+  width: 260px;
+  background-color: rgba(15, 47, 22, 0.9);
+  border: 1px solid #b89b5e;
+  border-radius: 15px;
+  margin: 15px;
+  overflow: hidden;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.capa-container {
+  width: 100%;
+  height: 340px;
+  overflow: hidden;
+}
+.capa-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.info-filme {
+  padding: 15px;
+}
+.info-filme h3 {
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  color: #f2f2f2;
+  margin: 0 0 10px 0;
+  font-size: 20px;
+}
+.info-filme p {
+  font-family: "Arial", sans-serif;
+  color: #cccccc;
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 0;
+}
+.card-filme:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(184, 155, 94, 0.3);
+  border-color: #f2f2f2;
+}
+.card-filme:hover .capa-container img {
+  transform: scale(1.08);
+}
+.TOY5 img {
+  width: 1000px;
+  border-radius: 20px;
+}
+.OndeAssistir img {
+  width: 500px;
+  margin: 20px;
+}
+.OndeAssistir h2 {
+  font-family: "Cinzel", serif;
+  color: #b89b5e;
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+.OndeAssistir p {
+  font-family: "Arial", sans-serif;
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+.cavalo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -10;
+
+  animation: cavalo 6s linear infinite;
+}
+
+.cavalo img {
+  width: 500px;
+  height: auto;
+}
+
+@keyframes cavalo {
+  0% {
+    top: -300px;
+  }
+
+  100% {
+    top: calc(100vh - 300px);
+  }
+}
+.TOY5 {
+  animation: flutuar 3s ease-in-out infinite;
+}
+
+.TOY5 img {
+  width: 1000px;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes flutuar {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
